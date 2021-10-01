@@ -18,7 +18,7 @@ chart_duty = pd.read_csv("楓Duty.csv")
 
 def main():
     USER_ID = info["USER_ID"]
-    name = chart_duty.iloc[0,dt_now.day]
+    name = chart_duty.iloc[dt_now.day-1,1]
     messages = TextSendMessage(text = f"今日のDutyは{name}です。")
     line_bot_api.push_message(USER_ID, messages=messages)
     
