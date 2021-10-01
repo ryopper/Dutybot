@@ -1,6 +1,8 @@
 import json
 import datetime
+!pip3 install pandas
 import pandas as pd
+
 
 dt_now = datetime.datetime.now()
 

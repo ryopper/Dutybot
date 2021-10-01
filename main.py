@@ -2,6 +2,7 @@ import json
 import datetime
 import pandas as pd
 
+
 dt_now = datetime.datetime.now()
 
 file = open("info.json","r")
@@ -13,7 +14,7 @@ from linebot.models import TextSendMessage
 CHANNEL_ACCESS_TOKEN = info["CHANNEL_ACCESS_TOKEN"]
 line_bot_api = LineBotApi(CHANNEL_ACCESS_TOKEN)
 
-chart_duty = pd.read_excel("dutybot/楓Duty.xlsx")
+chart_duty = pd.read_csv("dutybot/楓Duty.csv")
 
 def main():
     USER_ID = info["USER_ID"]
