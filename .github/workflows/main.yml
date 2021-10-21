@@ -27,6 +27,7 @@ jobs:
       - name: Install dependencies
         run: |
           # pip更新
+          pip install openpyxl
           pip install pandas
           python -m pip install --upgrade pip
           # 必要なパッケージインストール
