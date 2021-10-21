@@ -14,7 +14,7 @@ from linebot.models import TextSendMessage
 CHANNEL_ACCESS_TOKEN = info["CHANNEL_ACCESS_TOKEN"]
 line_bot_api = LineBotApi(CHANNEL_ACCESS_TOKEN)
 
-chart_duty = pd.read_csv("楓Duty.csv")
+chart_duty = pd.read_xlsx("楓Duty.xlsx")
 
 def main():
     USER_ID = info["USER_ID"]
