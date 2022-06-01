@@ -19,7 +19,7 @@ chart_duty = pd.read_excel("楓Duty.xlsx")
 def main():
     USER_ID = info["USER_ID"]
     name = chart_duty.iloc[dt_now.day-1,1]
-    messages = TextSendMessage(text = f"今日のDutyは{name}さんです。")
+    messages = TextSendMessage(text = f"No, 今日のDutyは{name}さんです。")
     line_bot_api.push_message(USER_ID, messages=messages)
     
 if __name__ == "__main__":
