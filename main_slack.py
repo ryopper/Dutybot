@@ -16,7 +16,7 @@ URL = info["URL"]
 chart_duty = pd.read_excel("新DUTY_LIST.xlsx")
 
 def main():
-    name = chart_duty.iloc[dt_now.day,1]
+    name = chart_duty.iloc[dt_now.day-3,1]
     if pd.isnull(name) == False:
         text = f'*本日のDutyは{name}さんです。*'
         data = {
